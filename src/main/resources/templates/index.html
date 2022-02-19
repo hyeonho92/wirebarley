@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>환율 계산</h1>
+</header>
+
+<main>
+    <article>
+        <table>
+            <tr>
+                <th>송금 국가: </th>
+                <td>미국(USD)</td>
+            </tr>
+            <tr>
+                <th>수취 국가:</th>
+                <td>
+                    <select name="nation" id="nation"></select>
+                </td>
+            </tr>
+            <tr>
+                <th>환율:</th>
+                <td id="currency"></td>
+            </tr>
+            <tr>
+                <th>송금액:</th>
+                <td><input type="number" id="money" required>USD</td>
+            </tr>
+            <tr>
+                <th>
+                    <button id="submit">submit</button>
+                </th>
+            </tr>
+        </table>
+    </article>
+    <article id="result"></article>
+</main>
+</body>
+<script th:src="@{/js/index.js}"></script>
+</html>
